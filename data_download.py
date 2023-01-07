@@ -40,24 +40,37 @@ def build_match_database(watcher, region, data):
     # Path to the Database
     path_to_match_database = '/Users/kevin/Documents/Kevin/Projects/my_league_stats/Data/match_database/match_database.csv'
     match_list = get_match_list_from_database(path_to_match_database)
-    print(match_list)
+#    test_match = 'EUW1_12345678903'
+#    print(match_list)
     latest_match_list = get_match_list(watcher, region, data)
+    latest_match_list.append(test_match)
+#    print(latest_match_list)
     # Appending the global match list on the database to the latest 20 games pulled from the API
     match_list = match_list + latest_match_list
+#    print(match_list)
     # Converting the list to a set so that only the unique values are stored
     match_set = set(match_list)
     match_list = list(match_set)
     # Converting 
     pd_match_list = pd.DataFrame(list(match_set))
     pd_match_list.to_csv(path_to_match_database)
+    #with open(path_to_match_database, 'a') as f:
+    #    match_list = str(match_list)
+    #    f.write(match_list)
     return match_list
 
 def get_match_list_from_database(path):
     match_list = []
-    some_list = []
-    with open(path, mode='r') as f:
-        csv_reader = csv.reader(f)
-        match_list = list(csv_reader)[1]
+    #some_list = []
+    #with open(path, mode='r') as f:
+    #    csv_reader = csv.reader(f)
+    #    match_list = list(csv_reader)
+    #print(match_list[0][0])
+    #print(match_list)
+    #print(type(match_list))
+    df = pd.read_csv(path)
+    match_list = df['0'].tolist()
+    print(match_list)
     return match_list
 
 def get_match_data(watcher, region):
