@@ -11,7 +11,8 @@ For example, if I wanted to know (and had built the database of games appropriat
 
 -> FEATURES TO ADD
 
--> For each match_id pull down the metadata and match specific information
--> store that in JSON or some other appropriate file format
+-> For each match_id pull down the metadata and match specific information (DONE for match data)
+-> store that in JSON or some other appropriate file format (DONE)
+-> create a function which reads all the files in the processed database so that we are not repetedly writing the same data which has already been written
 -> Create functions to build queries from the match_detail_database to create the overarching stats
 
