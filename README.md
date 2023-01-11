@@ -18,3 +18,6 @@ Finally I would like to create a front end display for this as well in Typescrip
 3. Add Separate account functionality, i.e. I want my main account data to be separate from smurf accounts
 
 
+## Future Development
+
+1. Front end code
