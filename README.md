@@ -19,6 +19,12 @@ Finally I would like to create a front end display for this as well in Typescrip
   - i.e. I want my main account data to be separate from smurf accounts
   - read accounts in from a list to be processed eg my_accounts = ['acc_1', 'acc_2] then func_do_everthing(my_accounts) 
 
+## How To Run this code
+
+1. add your Riot API get to the my_secrets.py file , delete the 0 and enter the API key as a string
+2. add your accounts to the list in the my_secrets.py file
+3. in the main.py file, change the region to the appropriate region your account is located in
+4. run main.py
 
 ## Future Development
 
