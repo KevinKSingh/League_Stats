@@ -89,3 +89,15 @@ def write_match_data(watcher, match_id, region):
     json_object = json.dumps(match_info)
     with open(file_name, 'w') as f:
         f.write(json_object)
+
+def get_list_of_files(path):
+    '''
+    This is a function which will get the list of files for the games which are already processed
+    INPUT -> takes in a PATH as a STRING 
+    OUTPUT -> returns a list of files in the PATH and subtracts the file ending '.json' from it
+    '''
+    file_ending = '.json'
+    list_of_files = [f.replace(file_ending,'') for f in listdir(path) if isfile(join(path,f))]
+    return list_of_files
+
+
