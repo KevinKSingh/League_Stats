@@ -15,7 +15,9 @@ Finally I would like to create a front end display for this as well in Typescrip
 
 1. Subtract the list of match ids which have already been processed from the ones which need to be processed
 2. Create a script to parse the data from the match JSON files to store champion specific information
-3. Add Separate account functionality, i.e. I want my main account data to be separate from smurf accounts
+3. Add Separate account functionality
+  - i.e. I want my main account data to be separate from smurf accounts
+  - read accounts in from a list to be processed eg my_accounts = ['acc_1', 'acc_2] then func_do_everthing(my_accounts) 
 
 
 ## Future Development
