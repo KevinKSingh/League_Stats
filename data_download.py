@@ -66,20 +66,18 @@ def get_match_data(watcher, region):
     -> then iterate through the list and generate JSON files with the information on each game from the match 'info' bit
     ->
     '''
+    # Source File paths on local computer
     match_list_src = '/Users/kevin/Documents/Kevin/Projects/my_league_stats/Data/match_database/match_database.csv'
     match_data_src = '/Users/kevin/Documents/Kevin/Projects/my_league_stats/Data/match_data/'
-    list_of_files = [f for f in listdir(match_data_src)]
+
+    # getting total match list from database, and list of matches already stored 
     match_list = get_match_list_from_database(match_list_src)
-    print(list_of_files)
-    print('I am here')
-    for match in match_list:
-        #print(match)    
+    list_of_files = get_list_of_files(match_data_src)
+    new_match_list = [x for x in match_list if x not in list_of_files] 
+    print(f"{len(new_match_list)} new games detected!")
+    for match in new_match_list:
         write_match_data(watcher, match, region)
         print(f"Data for Match: {match} has been written!")
-    #match_list = get_match_list_from_database(match_list_src)
-    #match_detail = watcher.match.by_id(region, match_id)
-    #metadata = match_detail['metadata']
-    #match_info = match_detail['info']
 
 def write_match_data(watcher, match_id, region):
     file_path = '/Users/kevin/Documents/Kevin/Projects/my_league_stats/Data/match_data/'

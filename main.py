@@ -7,8 +7,8 @@ riot_api_key = get_api_key()
 watcher = LolWatcher(riot_api_key)
 region = 'euw1'
 account_list = get_account_name()
-account_name = account_list[0]
-print(account_name)
+account_name = account_list[2] # since Stroblitz is the one I am interested in and third in the list
+print(f"Account being processed: {account_name}")
 if __name__ == '__main__':
     data = get_account_information(watcher, region, account_name)
     matches = get_match_list(watcher, region, data)
@@ -16,6 +16,5 @@ if __name__ == '__main__':
     #get_match_data(watcher, region, match_id)
     x = get_match_list_from_database('/Users/kevin/Documents/Kevin/Projects/my_league_stats/Data/match_database/match_database.csv')
     match_list = build_match_database(watcher, region, data)
-    print(f"The Number of Matches played so far are: {len(match_list)}")
     get_match_data(watcher, region)
-    
+    print(f"There are {len(x)} games in the database!")
