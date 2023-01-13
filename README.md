@@ -10,14 +10,14 @@ Finally I would like to create a front end display for this as well in Typescrip
 2. can append to the newest games to a global list of database of game IDs
 3. can download the match specific data for each game and store in JSON
 4. added functionality to detect which gameIDs have been processed already by checking which JSON files exist in the folder
+5. Subtract the list of match ids which have already been processed from the ones which need to be processed 
+6. Separate account functionality, the main.py script loops over all the accounts listed in the get_account function
 
 ## Features To Add
 
-1. Subtract the list of match ids which have already been processed from the ones which need to be processed
-2. Create a script to parse the data from the match JSON files to store champion specific information
-3. Add Separate account functionality
-  - i.e. I want my main account data to be separate from smurf accounts
-  - read accounts in from a list to be processed eg my_accounts = ['acc_1', 'acc_2] then func_do_everthing(my_accounts) 
+(DONE)
+1. Create a script to parse the data from the match JSON files to store champion specific information (IN PROGRESS)
+
 
 ## How To Run this code
 
