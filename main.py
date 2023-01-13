@@ -1,4 +1,5 @@
-from data_download import *
+#from data_download import *
+import data_download
 from my_secrets import get_api_key, get_account_name
 from riotwatcher import LolWatcher, ApiError
 # This is a comment to see if github from terminal works
@@ -6,15 +7,15 @@ from riotwatcher import LolWatcher, ApiError
 riot_api_key = get_api_key()
 watcher = LolWatcher(riot_api_key)
 region = 'euw1'
-account_list = get_account_name()
-account_name = account_list[2] # since Stroblitz is the one I am interested in and third in the list
-print(f"Account being processed: {account_name}")
 if __name__ == '__main__':
-    data = get_account_information(watcher, region, account_name)
-    matches = get_match_list(watcher, region, data)
-    match_id = matches[0]
-    #get_match_data(watcher, region, match_id)
-    x = get_match_list_from_database('/Users/kevin/Documents/Kevin/Projects/my_league_stats/Data/match_database/match_database.csv')
-    match_list = build_match_database(watcher, region, data)
-    get_match_data(watcher, region)
+    account_list = get_account_name()
+    for account in account_list:
+        print(f"Account being processed: {account}")
+        data = data_download.get_account_information(watcher, region, account)
+        matches = data_download.get_match_list(watcher, region, data)
+        #get_match_data(watcher, region, match_id)
+        x = data_download.get_match_list_from_database('/Users/kevin/Documents/Kevin/Projects/my_league_stats/Data/match_database/match_database.csv')
+        match_list = data_download.build_match_database(watcher, region, data)
+        data_download.get_match_data(watcher, region)
+        #x = get_match_list_from_database('/Users/kevin/Documents/Kevin/Projects/my_league_stats/Dat    a/match_database/match_database.csv')
     print(f"There are {len(x)} games in the database!")
