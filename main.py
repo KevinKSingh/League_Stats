@@ -17,5 +17,4 @@ if __name__ == '__main__':
         x = data_download.get_match_list_from_database('/Users/kevin/Documents/Kevin/Projects/my_league_stats/Data/match_database/match_database.csv')
         match_list = data_download.build_match_database(watcher, region, data)
         data_download.get_match_data(watcher, region)
-        #x = get_match_list_from_database('/Users/kevin/Documents/Kevin/Projects/my_league_stats/Dat    a/match_database/match_database.csv')
     print(f"There are {len(x)} games in the database!")
