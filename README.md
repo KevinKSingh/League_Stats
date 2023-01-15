@@ -12,11 +12,13 @@ Finally I would like to create a front end display for this as well in Typescrip
 4. added functionality to detect which gameIDs have been processed already by checking which JSON files exist in the folder
 5. Subtract the list of match ids which have already been processed from the ones which need to be processed 
 6. Separate account functionality, the main.py script loops over all the accounts listed in the get_account function
+7. Post Processing file can detect which of my accounts are in the game and sort those into the appropriate processed data folder
 
 ## Features To Add
 
-(DONE)
-1. Create a script to parse the data from the match JSON files to store champion specific information (IN PROGRESS)
+1. Decide what details from the JSON files we want to store and how (IN PROGRESS)
+2. Create a script to parse the data from the match JSON files to store champion specific information per account (IN PROGRESS)
+3. Add functionality which detects which of the games have already been processed from the overall match_database and which still require processing so that there is no work which is repeated unnecessarily.
 
 
 ## How To Run this code
