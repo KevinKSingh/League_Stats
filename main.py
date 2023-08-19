@@ -2,13 +2,15 @@
 import data_download
 from my_secrets import get_api_key, get_account_name
 from riotwatcher import LolWatcher, ApiError
+from menu import get_user_input
 # This is a comment to see if github from terminal works
 # Getting secrets infor like API Key and account name
 riot_api_key = get_api_key()
 watcher = LolWatcher(riot_api_key)
-region = 'euw1'
 if __name__ == '__main__':
-    account_list = get_account_name()
+    data_dict = get_user_input()
+    region = list(data_dict.keys())[0]  
+    account_list = data_dict[region]
     for account in account_list:
         print(f"Account being processed: {account}")
         data = data_download.get_account_information(watcher, region, account)
