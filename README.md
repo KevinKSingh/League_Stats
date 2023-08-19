@@ -13,6 +13,8 @@ Finally I would like to create a front end display for this as well in Typescrip
 5. Subtract the list of match ids which have already been processed from the ones which need to be processed 
 6. Separate account functionality, the main.py script loops over all the accounts listed in the get_account function
 7. Post Processing file can detect which of my accounts are in the game and sort those into the appropriate processed data folder
+8. Added a Main Menu with options to download data from my account, the other high elo accounts on EUW and finally download data from Korea
+9. added in cross region support for data download
 
 ## Features To Add
 
