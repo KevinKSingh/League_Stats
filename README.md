@@ -21,7 +21,11 @@ Finally I would like to create a front end display for this as well in Typescrip
 1. Decide what details from the JSON files we want to store and how (IN PROGRESS)
 2. Create a script to parse the data from the match JSON files to store champion specific information per account (IN PROGRESS)
 3. Add functionality which detects which of the games have already been processed from the overall match_database and which still require processing so that there is no work which is repeated unnecessarily.
-
+4. Maybe add a function in the main menu where you can search for a user in any region and it stores the server string and username to call from the relevant server
+5. Game post processing need functions for
+   -> user level champion breakdown, overall, ranked, normal, ARAM , Clash, Other
+   -> game breakdown, when winning anlysie gold differences CSD GPM etc and store somewhere
+6. Post process all the downloaded match data
 
 ## How To Run this code
 
