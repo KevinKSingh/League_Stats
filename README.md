@@ -34,6 +34,10 @@ Finally I would like to create a front end display for this as well in Typescrip
 3. in the main.py file, change the region to the appropriate region your account is located in
 4. run main.py
 
+## Known Bugs
+
+1. The code to make the tables to populate the sql database has a bug where the accounts keep getting appended so the data gets duplicated, have to clean up the table itself and edit the code so only new accounts are added to the tables. 
+
 ## Future Development
 
 1. Front end code
